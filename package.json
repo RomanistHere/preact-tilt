@@ -4,7 +4,7 @@
   "description": "A Peact port of the JS component tilt.js ready for pre-rendering",
   "main": "dist/index.js",
   "peerDependencies": {
-    "preact": "^10.3.2",
+    "preact": "*"
   },
   "unpkg": "dist/index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "@babel/preset-env": "^7.4.5",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "preact": "^10.3.2",
+    "preact": "*",
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.2"
   },
@@ -43,6 +43,6 @@
     "type": "git",
     "url": "https://github.com/RomanistHere/preact-tilt"
   },
-  "homepage": "https://codesandbox.io/s/73rqoq599j",
+  "homepage": "https://github.com/RomanistHere/preact-tilt",
   "license": "MIT"
 }
