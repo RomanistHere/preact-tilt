@@ -1,4 +1,4 @@
-react-tilty
+preact-tilt
 ===========
 
 [![npm version][npm-badge]][npm-url]
@@ -8,31 +8,32 @@ react-tilty
 [![npm downloads][license-badge]][license-url]
 
 
-A React port of the [vanilla-tilt.js](https://micku7zu.github.io/vanilla-tilt.js/index.html) version of [Tilt.js](http://gijsroge.github.io/tilt.js/)
+A Preact port of the [vanilla-tilt.js](https://micku7zu.github.io/vanilla-tilt.js/index.html) version of [Tilt.js](http://gijsroge.github.io/tilt.js/) based on React [port](https://github.com/jonahallibone/react-tilty).
 
-_"A tiny requestAnimationFrame powered 60+fps lightweight parallax hover tilt effect for **React**"_
+A tiny requestAnimationFrame powered 60+fps lightweight parallax hover tilt effect for **Preact**
+Add server-side pre-rendering check for window.
 
 Check out a simple demo [here!](https://codesandbox.io/s/73rqoq599j?fontsize=14)
 
 ## Installation
 
-This package is hosted on [npm](https://www.npmjs.com/package/react-tilty)
+This package is hosted on [npm](https://www.npmjs.com/package/preact-tilt)
 
-`npm i react-tilty`
+`npm install preact-tilt --save`
 
 ## How to Use
 
-This component is imported and used like any standard React component
+This component is imported and used like any standard Preact component
 
 ```jsx
-import React, { Component } from "react";
-import Tilty from "react-tilty";
+import { Component } from 'preact/compat'
+import Tilt from "preact-tilt";
 
 class App extends Component {
   render() {
     return (
       <div class="App">
-        <Tilty></Tilty>
+        <Tilt></Tilt>
       </div>
     );
   }
@@ -43,7 +44,7 @@ export default App;
 
 ## Options
 
-Tilty has a variety of options which can be passed in either as a settings object prop or as individual properties using `data-tilt-{propertyname}`
+Tilt has a variety of options which can be passed in either as a settings object prop or as individual properties using `data-tilt-{propertyname}`
 
 Here is a list of available options with their defaults:
 ```js
@@ -70,7 +71,7 @@ gyroscopeMaxAngleY:     45      // This is the top limit of the device angle on 
 **Example:**
 
 ```jsx
-<Tilty
+<Tilt
   data-tilt-reverse="true"
   data-tilt-axis="x"
   settings = {{
@@ -78,7 +79,7 @@ gyroscopeMaxAngleY:     45      // This is the top limit of the device angle on 
     perspective: 900,
     reset: false
   }}>
-</Tilty>
+</Tilt>
 ```
 
 ### Creating a Parallax Effect
@@ -89,9 +90,9 @@ In order to add a parallax effect to the element and it's child, you must add so
 
 
 ```jsx
-<Tilty style={{transformStyle: "preserve-3d"}}>
+<Tilt style={{transformStyle: "preserve-3d"}}>
   <div style={{transform: "translateZ(30px)"}}></div>
-</Tilty>
+</Tilt>
 ```
 
 ### Tilt Change Event
@@ -100,7 +101,7 @@ You can add an event listener to the component's `tiltChange` event in order to 
 
 ```jsx
 componentDidMount() {
-  const tilt = document.querySelector('#tilty');
+  const tilt = document.querySelector('#tilt');
   tilt.addEventListener("tiltChange", e => {
     console.log(e.detail);
     // {
@@ -125,11 +126,11 @@ componentDidMount() {
 
 
 
-[npm-url]:https://www.npmjs.com/package/react-tilty
+[npm-url]:https://www.npmjs.com/package/preact-tilt
 [license-url]:./LICENSE
 
-[npm-badge]:https://badge.fury.io/js/react-tilty.svg
-[downloads-badge]:https://badgen.net/npm/dt/react-tilty
-[size-badge]:https://img.shields.io/bundlephobia/minzip/react-tilty.svg
-[dependencies-badge]:https://david-dm.org/jonahallibone/react-tilty/status.svg
-[license-badge]:https://badgen.net/npm/license/react-tilty
+[npm-badge]:https://badge.fury.io/js/preact-tilt.svg
+[downloads-badge]:https://badgen.net/npm/dt/preact-tilt
+[size-badge]:https://img.shields.io/bundlephobia/minzip/preact-tilt.svg
+[dependencies-badge]:https://david-dm.org/jonahallibone/preact-tilt/status.svg
+[license-badge]:https://badgen.net/npm/license/preact-tilt

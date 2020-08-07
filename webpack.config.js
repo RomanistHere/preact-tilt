@@ -4,17 +4,17 @@ const libraryName= pkg.name;
 
 module.exports = {
   entry: path.join(__dirname, "./src/index.js"),
-  output: {      
-    path: path.join(__dirname, './dist'),      
+  output: {
+    path: path.join(__dirname, './dist'),
     filename: 'index.js',
     library: libraryName,
     libraryTarget: 'umd',
     publicPath: '/dist/',
-    umdNamedDefine: true  
+    umdNamedDefine: true
   },
-  resolve: {      
-    alias: {          
-      'react': path.resolve(__dirname, './node_modules/react')
+  resolve: {
+    alias: {
+      'preact': path.resolve(__dirname, './node_modules/preact')
     }
   },
   module: {
@@ -34,12 +34,12 @@ module.exports = {
       }
     ]
   },
-  externals: {           
-    react: {          
-        commonjs: "react",          
-        commonjs2: "react",          
-        amd: "React",          
-        root: "React"      
+  externals: {
+    react: {
+        commonjs: "react",
+        commonjs2: "react",
+        amd: "React",
+        root: "React"
     }
   }
 };
