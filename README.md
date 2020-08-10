@@ -1,9 +1,8 @@
-preact-tilt
+Preact-tilt
 ===========
 
 [![npm version][npm-badge]][npm-url]
 [![npm downloads][downloads-badge]][npm-url]
-[![dependencies Status][dependencies-badge]][npm-url]
 [![npm bundle size][size-badge]][npm-url]
 [![npm downloads][license-badge]][license-url]
 
@@ -82,6 +81,12 @@ gyroscopeMaxAngleY:     45      // This is the top limit of the device angle on 
 </Tilt>
 ```
 
+**Example live:**
+
+I've created and updated this component to use it in my website(it's open-source as well), so you can see both how it looks and works with preact here:
+[website](https://romanisthere.github.io/apps/)
+and here: [github code](https://github.com/RomanistHere/RomanistHere.github.io/blob/develop/src/components/Slider/Slider.js#L22), [config](https://github.com/RomanistHere/RomanistHere.github.io/blob/develop/src/static/sliderConfig.js#L48)
+
 ### Creating a Parallax Effect
 
 In order to add a parallax effect to the element and it's child, you must add some css properties to them:
@@ -132,5 +137,4 @@ componentDidMount() {
 [npm-badge]:https://badge.fury.io/js/preact-tilt.svg
 [downloads-badge]:https://badgen.net/npm/dt/preact-tilt
 [size-badge]:https://img.shields.io/bundlephobia/minzip/preact-tilt.svg
-[dependencies-badge]:https://david-dm.org/jonahallibone/preact-tilt/status.svg
 [license-badge]:https://badgen.net/npm/license/preact-tilt
